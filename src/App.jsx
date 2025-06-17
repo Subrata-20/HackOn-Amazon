@@ -15,6 +15,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ApplyCertificate from './pages/Applyfoecertecochain.jsx';
 import { Toaster } from 'react-hot-toast';
+import Impact from './pages/Impact.jsx';
 
 
 const App = () => {
@@ -32,6 +33,7 @@ const App = () => {
         <Route path="/user-dashboard" element={<UserDashboard/>} />
         <Route path="/cart" element={<Cart/>} />
         <Route path="/applyforcertification" element={<ApplyCertificate/>}/>
+        <Route path="/impact" element={<Impact/>}/>
       </Routes>
       <Footer/>
       <ToastContainer/>

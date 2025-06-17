@@ -9,10 +9,10 @@ const Header = ({ cartItemCount, onCartClick }) => {
 
     const sustainableApps = [
         { name: "EcoSense AI", path: "/ecosense-ai" },
-        { name: "GreenGather", path: "/greengather" },
+        { name: "GreenGather AI", path: "/greengather" },
         { name: "Repack AI", path: "/repack-ai" },
         { name: "Carbon Karma", path: "/carbon-karma" },
-        { name: "EcoChain AI", path: "/ecochain-ai" }
+        { name: "EcoChain Trace", path: "/ecochain-ai" }
     ];
 
     return (
@@ -144,6 +144,7 @@ const Header = ({ cartItemCount, onCartClick }) => {
         <a href="#" className="text-white hover:text-green-300">Eco Registry</a>
         <a href="#" className="text-white hover:text-green-300">Gift Cards</a>
         <a href="#" className="text-white hover:text-green-300">Sell Sustainable</a>
+        <Link to="/impact" className="text-white hover:text-green-300">Our Impact</Link>
     </div>
     <div className="flex items-center space-x-6 text-sm mr-2">
         <div className='flex items-center text-white hover:text-green-300'>
