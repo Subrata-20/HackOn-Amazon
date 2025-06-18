@@ -1,99 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eco Product Dashboard</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
+    <title>Eco Recommendation System</title>
+    <style>
+        * { box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        
+        header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+        .product-card { border: 1px solid #e1e1e1; border-radius: 8px; padding: 15px; transition: transform 0.3s; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .product-card img { width: 100%; height: 200px; object-fit: contain; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .product-card h3 { margin: 10px 0; font-size: 1.1rem; }
+        .product-card p { margin: 5px 0; font-size: 0.9rem; }
+        .eco-badge { background: #2ecc71; color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; }
+        .actions { display: flex; gap: 10px; margin-top: 10px; }
+        .actions button { flex: 1; padding: 8px; border: none; border-radius: 4px; cursor: pointer; }
+        .view-btn { background: #3498db; color: white; }
+        .buy-btn { background: #e74c3c; color: white; }
+        
+        .section-title { border-bottom: 2px solid #2ecc71; padding-bottom: 10px; margin-top: 30px; }
+        
+        .add-product-form { background: #f9f9f9; padding: 20px; border-radius: 8px; margin-top: 40px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input, .form-group select, .form-group textarea { 
+            width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; 
+        }
+        .submit-btn { background: #2ecc71; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; }
+    </style>
 </head>
-<body class="bg-light">
-    <div class="container mt-4">
-        <h2 class="text-center mb-4">Eco Product Blockchain Dashboard</h2>
+<body>
+    <header>
+        <h1>🌿 Eco Recommendations</h1>
+        <form method="POST" action="/">
+            <input type="text" name="search" placeholder="Search eco-friendly products...">
+            <button type="submit">Search</button>
+        </form>
+    </header>
 
-        <!-- Upload Form -->
-        <div class="card p-4 mb-4">
-            <h5 class="card-title">Submit New Product</h5>
-            <form action="/submit" method="post" enctype="multipart/form-data">
-                <div class="row g-3">
-                    <div class="col-md-6">
-                        <input type="text" name="product_id" class="form-control" placeholder="Product ID" required>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="text" name="product_name" class="form-control" placeholder="Product Name" required>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="text" name="manufacturer" class="form-control" placeholder="Manufacturer" required>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="text" name="location" class="form-control" placeholder="Location" required>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="text" name="category" class="form-control" placeholder="Category" required>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="text" name="materials" class="form-control" placeholder="Materials" required>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="number" step="0.01" name="carbon_kg" class="form-control" placeholder="Carbon Footprint (kg)" required>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="text" name="certifying_body" class="form-control" placeholder="Certifying Body" value="Amazon GreenX">
-                    </div>
-                    <div class="col-12">
-                        <textarea name="notes" class="form-control" placeholder="Additional Notes" rows="2"></textarea>
-                    </div>
-                    <div class="col-12">
-                        <input type="file" name="image" class="form-control" required>
-                    </div>
-                    <div class="col-12 text-end">
-                        <button type="submit" class="btn btn-success">Submit Product</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-        <!-- Search by ECT ID -->
-        <div class="card p-3 mb-4">
-            <h5 class="card-title">Verify Product</h5>
-            <form action="/verify" method="get" class="d-flex">
-                <input type="text" name="ect_id" class="form-control me-2" placeholder="Enter ECT ID" required>
-                <button type="submit" class="btn btn-primary">Verify</button>
-            </form>
-        </div>
-
-        <!-- Product Table -->
-        <div class="card p-3">
-            <h5 class="card-title">All Products</h5>
-            <div class="table-responsive">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>ECT ID</th>
-                            <th>Product</th>
-                            <th>Manufacturer</th>
-                            <th>Category</th>
-                            <th>Carbon (kg)</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for item in products %}
-                        <tr>
-                            <td>{{ item.ect_id }}</td>
-                            <td>{{ item.product_name }}</td>
-                            <td>{{ item.manufacturer }}</td>
-                            <td>{{ item.category }}</td>
-                            <td>{{ item.carbon_kg }}</td>
-                            <td>{% if item.eco_certified %}<span class="text-success">Certified</span>{% else %}<span class="text-warning">Pending</span>{% endif %}</td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
+    <!-- Personalized Recommendations -->
+    <h2 class="section-title">Recommended For You</h2>
+    <div class="product-grid">
+        {% for product in personalized %}
+        <div class="product-card">
+            <img src="{{ product.image_url or 'https://via.placeholder.com/250?text=No+Image' }}" alt="{{ product.name }}">
+            <h3>{{ product.name }}</h3>
+            <p><strong>{{ product.brand }}</strong> | {{ product.category }}</p>
+            <p>Price: ${{ product.price }}</p>
+            <p>Eco Score: <span class="eco-badge">{{ product.eco_score }}/100</span></p>
+            <div class="actions">
+                <a href="/interact/{{ product.product_id }}/view" class="view-btn">View</a>
+                <a href="/interact/{{ product.product_id }}/purchase" class="buy-btn">Buy</a>
             </div>
         </div>
+        {% else %}
+        <p>No personalized recommendations yet. Start browsing products!</p>
+        {% endfor %}
+    </div>
 
+    <!-- Trending Products -->
+    <h2 class="section-title">Trending Now</h2>
+    <div class="product-grid">
+        {% for product in trending %}
+        <div class="product-card">
+            <img src="{{ product.image_url or 'https://via.placeholder.com/250?text=No+Image' }}" alt="{{ product.name }}">
+            <h3>{{ product.name }}</h3>
+            <p><strong>{{ product.brand }}</strong> | {{ product.category }}</p>
+            <p>Price: ${{ product.price }}</p>
+            <p>Popularity: {{ product.interaction_count }} interactions</p>
+            <div class="actions">
+                <a href="/interact/{{ product.product_id }}/view" class="view-btn">View</a>
+                <a href="/interact/{{ product.product_id }}/purchase" class="buy-btn">Buy</a>
+            </div>
+        </div>
+        {% else %}
+        <p>No trending products found.</p>
+        {% endfor %}
+    </div>
+
+    <!-- All Products -->
+    <h2 class="section-title">All Eco-Friendly Products</h2>
+    <div class="product-grid">
+        {% for product in all_products %}
+        <div class="product-card">
+            <img src="{{ product.image_url or 'https://via.placeholder.com/250?text=No+Image' }}" alt="{{ product.name }}">
+            <h3>{{ product.name }}</h3>
+            <p><strong>{{ product.brand }}</strong> | {{ product.category }}</p>
+            <p>Price: ${{ product.price }}</p>
+            <p>Eco Score: <span class="eco-badge">{{ product.eco_score }}/100</span></p>
+            <div class="actions">
+                <a href="/interact/{{ product.product_id }}/view" class="view-btn">View</a>
+                <a href="/interact/{{ product.product_id }}/purchase" class="buy-btn">Buy</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Add New Product Form -->
+    <div class="add-product-form">
+        <h2>Add New Product</h2>
+        <form action="/add_product" method="POST">
+            <div class="form-group">
+                <label>Product Name</label>
+                <input type="text" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Category</label>
+                <select name="category" required>
+                    <option value="Household">Household & Kitchen</option>
+                    <option value="Fashion">Clothing & Fashion</option>
+                    <option value="Personal Care">Personal Care</option>
+                    <option value="Lifestyle">Lifestyle</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Brand</label>
+                <input type="text" name="brand" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Price ($)</label>
+                <input type="number" name="price" step="0.01" min="0" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Eco Score (0-100)</label>
+                <input type="number" name="eco_score" min="0" max="100" value="80" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Image URL</label>
+                <input type="url" name="image_url" placeholder="https://example.com/image.jpg">
+            </div>
+            
+            <div class="form-group">
+                <label>Description</label>
+                <textarea name="description" rows="3"></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Add Product</button>
+        </form>
     </div>
 </body>
 </html>

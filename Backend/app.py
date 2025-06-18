@@ -1,157 +1,218 @@
-# # File: app.py
-# from flask import Flask, request, jsonify, send_file
-# import os
-# import qrcode
+# import streamlit as st
+# import boto3
+# import uuid
+# import cv2
+# import numpy as np
+# from PIL import Image
 # from io import BytesIO
-# from models import blockchain
-# from flask import render_template
+# import os
+
+# # AWS CONFIG
+# AWS_ACCESS_KEY = ""
+# AWS_SECRET_KEY = ""
+# BUCKET_NAME = ""
+# FOLDER_NAME = "seller_images"
+# DOCUMENT_FOLDER = "documents"
+# LIVE_FOLDER = "live_photos"
+
+# # Initialize clients
+# s3 = boto3.client("s3", aws_access_key_id=AWS_ACCESS_KEY, aws_secret_access_key=AWS_SECRET_KEY)
+# rekognition = boto3.client("rekognition", aws_access_key_id=AWS_ACCESS_KEY, aws_secret_access_key=AWS_SECRET_KEY,region_name='us-east-1')
+
+# # Upload helper
+# def upload_image(file_bytes, filename, folder):
+#     key = f"{folder}/{filename}"
+#     s3.put_object(Bucket=BUCKET_NAME, Key=key, Body=file_bytes)
+#     return key
+
+# # Compare faces
+# def compare_faces(source_key, target_key):
+#     response = rekognition.compare_faces(
+#         SourceImage={'S3Object': {'Bucket': BUCKET_NAME, 'Name': source_key}},
+#         TargetImage={'S3Object': {'Bucket': BUCKET_NAME, 'Name': target_key}},
+#         SimilarityThreshold=70
+#     )
+#     return response['FaceMatches']
+
+# # Webcam capture
+# def capture_image():
+#     cap = cv2.VideoCapture(0)
+#     st.info("Press 'q' to capture.")
+#     img = None
+#     while True:
+#         ret, frame = cap.read()
+#         cv2.imshow("Press 'q' to capture", frame)
+#         if cv2.waitKey(1) & 0xFF == ord('q'):
+#             img = frame
+#             break
+#     cap.release()
+#     cv2.destroyAllWindows()
+#     return img
+
+# # Load all document images in S3 (as database)
+# def list_document_images():
+#     response = s3.list_objects_v2(Bucket=BUCKET_NAME, Prefix=DOCUMENT_FOLDER+'/')
+#     if 'Contents' not in response:
+#         return []
+#     return [obj['Key'] for obj in response['Contents'] if obj['Key'].endswith(('jpg', 'jpeg', 'png'))]
+
+# # Streamlit UI
+# st.title("🕵️‍♂️ Fraud Detection with Database Image Matching")
+
+# # Step 1: Upload New Document (optional)
+# doc_image = st.file_uploader("Upload New Document to Database", type=["jpg", "jpeg", "png"])
+# if doc_image and st.button("Add to Database"):
+#     doc_bytes = doc_image.read()
+#     doc_filename = f"{uuid.uuid4()}_{doc_image.name}"
+#     doc_key = upload_image(doc_bytes, doc_filename, DOCUMENT_FOLDER)
+#     st.success(f"✅ Uploaded as {doc_key}")
+
+# # Step 2: Capture real-time photo
+# if st.button("📸 Capture Real-Time Photo and Match with Database"):
+#     captured = capture_image()
+#     if captured is not None:
+#         st.image(captured, caption="Captured Image", channels="BGR")
+
+#         _, buffer = cv2.imencode(".jpg", captured)
+#         live_bytes = BytesIO(buffer.tobytes())
+
+#         # Upload live image
+#         live_filename = f"{uuid.uuid4()}_live.jpg"
+#         live_key = upload_image(live_bytes.getvalue(), live_filename, LIVE_FOLDER)
+
+#         # Compare with each document in database
+#         doc_keys = list_document_images()
+#         best_match = None
+#         highest_similarity = 0
+
+#         for doc_key in doc_keys:
+#             matches = compare_faces(doc_key, live_key)
+#             if matches:
+#                 similarity = matches[0]["Similarity"]
+#                 if similarity > highest_similarity:
+#                     highest_similarity = similarity
+#                     best_match = doc_key
+
+#         if best_match:
+#             st.success(f"✅ Match Found in Database! Similarity: {highest_similarity:.2f}%")
+#             # Show matched image
+#             image_url = f"https://{BUCKET_NAME}.s3.amazonaws.com/{best_match}"
+#             st.image(image_url, caption=f"Matched with: {os.path.basename(best_match)}")
+#         else:
+#             st.error("❌ No Match Found in Database! Fraud Suspected.")
 
 
 
-
-# app = Flask(__name__)
-# UPLOAD_FOLDER = 'uploads'
-# os.makedirs(UPLOAD_FOLDER, exist_ok=True)
-
-# # Initialize DB on startup
-# blockchain.init_db()
-
-# @app.route('/')
-# def index():
-#     return render_template('index.html')
-
-# @app.route('/submit', methods=['POST'])
-# def submit():
-#     data = request.form.to_dict()
-#     image = request.files['image']
-
-#     if not image:
-#         return jsonify({"error": "Image required"}), 400
-
-#     image_filename = os.path.join(UPLOAD_FOLDER, image.filename)
-#     image.save(image_filename)
-
-#     required_keys = ["product_id", "product_name", "manufacturer", "location", "materials",
-#                      "carbon_kg", "notes", "category"]
-#     for key in required_keys:
-#         if key not in data:
-#             return jsonify({"error": f"Missing field: {key}"}), 400
-
-#     product_data = {
-#         **data,
-#         "carbon_kg": float(data["carbon_kg"]),
-#         "certifying_body": data.get("certifying_body", "Amazon GreenX"),
-#         "image_filename": image_filename
-#     }
-
-#     ect_id = blockchain.submit_product(product_data)
-#     return jsonify({"message": "Product submitted", "ect_id": ect_id})
-
-# @app.route('/certify/<ect_id>', methods=['POST'])
-# def certify(ect_id):
-#     blockchain.certify_product(ect_id)
-#     return jsonify({"message": f"Product {ect_id} certified."})
-
-# @app.route('/product/<ect_id>', methods=['GET'])
-# def get_product(ect_id):
-#     data = blockchain.get_product(ect_id)
-#     if not data:
-#         return jsonify({"error": "Product not found"}), 404
-#     return jsonify(data)
-
-# @app.route('/qr/<ect_id>', methods=['GET'])
-# def get_qr(ect_id):
-#     data = blockchain.get_product(ect_id)
-#     if not data:
-#         return jsonify({"error": "Product not found"}), 404
-
-#     verify_url = f"http://localhost:5000/product/{ect_id}"
-#     qr = qrcode.make(verify_url)
-#     buf = BytesIO()
-#     qr.save(buf)
-#     buf.seek(0)
-#     return send_file(buf, mimetype='image/png')
-
-# if __name__ == '__main__':
-#     app.run(debug=True)
-
-# File: app.py
-from flask import Flask, request, jsonify, send_file, render_template, redirect, url_for
-import os
-import qrcode
+import streamlit as st
+import boto3
+import uuid
+import cv2
+import numpy as np
+from PIL import Image
 from io import BytesIO
-from models import blockchain
+import os
 
-app = Flask(__name__)
-UPLOAD_FOLDER = 'uploads'
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+# AWS CONFIG (replace with environment variables or a safer method in production)
+AWS_ACCESS_KEY = "YOUR_ACCESS_KEY"
+AWS_SECRET_KEY = "YOUR_SECRET_KEY"
+REGION = "us-east-1"
+BUCKET_NAME = "hackon0101"
+DOCUMENT_FOLDER = "documents"
+LIVE_FOLDER = "live_photos"
 
-# Initialize DB on startup
-blockchain.init_db()
+# Initialize AWS clients
+s3 = boto3.client("s3", aws_access_key_id=AWS_ACCESS_KEY, aws_secret_access_key=AWS_SECRET_KEY)
+rekognition = boto3.client("rekognition", aws_access_key_id=AWS_ACCESS_KEY,
+                           aws_secret_access_key=AWS_SECRET_KEY, region_name=REGION)
 
-@app.route('/')
-def index():
-    products = blockchain.get_all_products()
-    return render_template('index.html', products=products)
+# Upload image to S3
+def upload_image(file_bytes, filename, folder):
+    key = f"{folder}/{filename}"
+    s3.put_object(Bucket=BUCKET_NAME, Key=key, Body=file_bytes)
+    return key
 
-@app.route('/submit', methods=['POST'])
-def submit():
-    data = request.form.to_dict()
-    image = request.files.get('image')
+# Compare two faces using Rekognition
+def compare_faces(source_key, target_key):
+    response = rekognition.compare_faces(
+        SourceImage={'S3Object': {'Bucket': BUCKET_NAME, 'Name': source_key}},
+        TargetImage={'S3Object': {'Bucket': BUCKET_NAME, 'Name': target_key}},
+        SimilarityThreshold=70
+    )
+    return response['FaceMatches']
 
-    if not image:
-        return jsonify({"error": "Image required"}), 400
+# Capture image from webcam
+def capture_image():
+    cap = cv2.VideoCapture(0)
+    if not cap.isOpened():
+        st.error("Unable to access webcam.")
+        return None
 
-    image_filename = os.path.join(UPLOAD_FOLDER, image.filename)
-    image.save(image_filename)
+    st.info("Press 'q' in the webcam window to capture an image.")
+    img = None
+    while True:
+        ret, frame = cap.read()
+        if not ret:
+            st.error("Failed to read from webcam.")
+            break
 
-    required_keys = ["product_id", "product_name", "manufacturer", "location", "materials",
-                     "carbon_kg", "notes", "category"]
-    for key in required_keys:
-        if key not in data:
-            return jsonify({"error": f"Missing field: {key}"}), 400
+        cv2.imshow("Press 'q' to capture", frame)
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            img = frame
+            break
 
-    product_data = {
-        **data,
-        "carbon_kg": float(data["carbon_kg"]),
-        "certifying_body": data.get("certifying_body", "Amazon GreenX"),
-        "image_filename": image_filename
-    }
+    cap.release()
+    cv2.destroyAllWindows()
+    return img
 
-    ect_id = blockchain.submit_product(product_data)
-    return redirect(url_for('index'))
+# List document images in S3
+def list_document_images():
+    response = s3.list_objects_v2(Bucket=BUCKET_NAME, Prefix=DOCUMENT_FOLDER + '/')
+    if 'Contents' not in response:
+        return []
+    return [obj['Key'] for obj in response['Contents'] if obj['Key'].lower().endswith(('.jpg', '.jpeg', '.png'))]
 
-@app.route('/certify/<ect_id>', methods=['POST'])
-def certify(ect_id):
-    blockchain.certify_product(ect_id)
-    return redirect(url_for('index'))
+# UI starts here
+st.title("🕵️‍♂️ Fraud Detection: Match Live Image with Database")
 
-@app.route('/product/<ect_id>', methods=['GET'])
-def get_product(ect_id):
-    data = blockchain.get_product(ect_id)
-    if not data:
-        return jsonify({"error": "Product not found"}), 404
-    return jsonify(data)
+# Upload new document image
+doc_image = st.file_uploader("📄 Upload New Document to Database", type=["jpg", "jpeg", "png"])
+if doc_image and st.button("📁 Add to Database"):
+    doc_bytes = doc_image.read()
+    doc_filename = f"{uuid.uuid4()}_{doc_image.name}"
+    doc_key = upload_image(doc_bytes, doc_filename, DOCUMENT_FOLDER)
+    st.success(f"✅ Document uploaded as `{doc_key}`")
 
-@app.route('/verify')
-def verify():
-    ect_id = request.args.get('ect_id')
-    if not ect_id:
-        return jsonify({"error": "ECT ID required"}), 400
-    return redirect(url_for('get_product', ect_id=ect_id))
+# Capture and match image
+if st.button("📸 Capture Real-Time Photo and Match"):
+    captured = capture_image()
+    if captured is not None:
+        st.image(captured, caption="Captured Image", channels="BGR", use_container_width=True)
 
-@app.route('/qr/<ect_id>', methods=['GET'])
-def get_qr(ect_id):
-    data = blockchain.get_product(ect_id)
-    if not data:
-        return jsonify({"error": "Product not found"}), 404
+        # Convert and upload
+        _, buffer = cv2.imencode(".jpg", captured)
+        live_bytes = BytesIO(buffer.tobytes())
+        live_filename = f"{uuid.uuid4()}_live.jpg"
+        live_key = upload_image(live_bytes.getvalue(), live_filename, LIVE_FOLDER)
 
-    verify_url = f"http://localhost:5000/product/{ect_id}"
-    qr = qrcode.make(verify_url)
-    buf = BytesIO()
-    qr.save(buf)
-    buf.seek(0)
-    return send_file(buf, mimetype='image/png')
+        # Match with documents
+        doc_keys = list_document_images()
+        best_match = None
+        highest_similarity = 0.0
 
-if __name__ == '__main__':
-    app.run(debug=True)
+        for doc_key in doc_keys:
+            try:
+                matches = compare_faces(doc_key, live_key)
+                if matches:
+                    similarity = matches[0]["Similarity"]
+                    if similarity > highest_similarity:
+                        highest_similarity = similarity
+                        best_match = doc_key
+            except Exception as e:
+                st.warning(f"⚠️ Could not compare with {doc_key}: {e}")
+
+        if best_match:
+            st.success(f"✅ Match Found! Similarity: {highest_similarity:.2f}%")
+            image_url = f"https://{BUCKET_NAME}.s3.amazonaws.com/{best_match}"
+            st.image(image_url, caption=f"Matched with: {os.path.basename(best_match)}", use_container_width=True)
+        else:
+            st.error("❌ No Match Found in Database! Fraud Suspected.")
