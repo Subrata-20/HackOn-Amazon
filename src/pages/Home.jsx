@@ -4,6 +4,7 @@ import EcoProductCard from '../components/ProductCard.jsx';
 import HeroSection from '../components/HeroSection.jsx';
 
 const Home = () => {
+
   return (
     <>
       <HeroSection />

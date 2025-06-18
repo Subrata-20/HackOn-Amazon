@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '../components/impact/CustomCard';
 import { Badge } from '../components/impact/CustomBadge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/impact/CustomTabs';
-import { Earth, ArrowUp } from 'lucide-react';
+import { Earth, ArrowUp, Mail, Building2, MessageCircle } from 'lucide-react';
 import ImpactCharts from '../components/impact/ImpactCharts';
 import LiveCounters from '../components/impact/LiveCounters';
 import StorySection from '../components/impact/StorySection';
@@ -202,6 +202,49 @@ const Impact = () => {
 
       {/* Stories Section */}
       <StorySection />
+      <div className=" bg-white max-w-screen-xl mb-10 mx-auto rounded-3xl shadow-2xl py-20 px-6 border-t border-green-100">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#1F3B2C] mb-6 flex items-center justify-center gap-2">
+            <Building2 className="w-8 h-8 text-green-700" />
+            Partner with Us
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
+            Are you a small business, sustainable startup, or eco-conscious brand? Let's collaborate to amplify impact and grow together.
+          </p>
+
+          <form className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+            <div className="flex flex-col">
+              <label htmlFor="name" className="text-sm text-gray-700 font-medium">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Doe" className="mt-1 px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:outline-none" />
+            </div>
+            <div className="flex flex-col">
+              <label htmlFor="email" className="text-sm text-gray-700 font-medium">Email</label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" className="mt-1 px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:outline-none" />
+            </div>
+            <div className="flex flex-col md:col-span-2">
+              <label htmlFor="company" className="text-sm text-gray-700 font-medium">Company Name</label>
+              <input type="text" id="company" name="company" placeholder="EcoWave Pvt Ltd" className="mt-1 px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:outline-none" />
+            </div>
+            <div className="flex flex-col md:col-span-2">
+              <label htmlFor="message" className="text-sm text-gray-700 font-medium">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your sustainability journey or how you'd like to collaborate..." className="mt-1 px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:outline-none" />
+            </div>
+            <div className="md:col-span-2 flex justify-center">
+              <button
+                type="submit"
+                className="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-md flex items-center gap-2 transition"
+              >
+                <Mail className="w-5 h-5" />
+                Send Message
+              </button>
+            </div>
+          </form>
+
+          <p className="text-sm text-gray-500 mt-6">
+            We typically respond within 2–3 business days.
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
