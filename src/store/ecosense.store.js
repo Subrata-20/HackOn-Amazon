@@ -24,4 +24,4 @@ verifyseller:async (formData) => {
 }));
 
 
-export default useEcosense; 
+export default useEcosense;
