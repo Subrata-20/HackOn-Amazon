@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Leaf, X, Droplets, Sun, Sprout } from 'lucide-react';
+import { Leaf, X, Droplets, Sun, Sprout, Building2, TreePine, PackageCheck, ScanBarcode, CloudCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Education = () => {
@@ -33,39 +33,66 @@ const Education = () => {
     {
       name: 'EcoSense AI',
       description: 'AI for Seller Validation & Local Seller Upliftment',
-      icon: '🏠',
+      icon: <Building2 className="h-10 w-10"/>,
       color: 'bg-emerald-100 text-emerald-800',
-      modalContent: `Verifies sellers and maps genuine eco-products to right categories.
-      
-Empowers small/local eco-friendly sellers to access Amazon without paperwork overload.`
+      modalContent: <div className="text-gray-700  leading-relaxed font-semibold text-xl">AI for Seller Validation & Local Seller Upliftment
+<br/><li>Verifies sellers and maps genuine ecoproducts to right categories.</li><li>Empowers small/local eco-friendly
+sellers
+to access Amazon without paperwork
+overload.</li></div>
     },
     {
       name: 'GreenGather AI',
       description: 'Personalized eco-friendly product recommendations',
-      icon: '🛍️',
+      icon: <TreePine className="h-10 w-10" /> ,
       color: 'bg-green-100 text-green-800',
-      modalContent: '[Add content here for GreenGather AI]'
+      modalContent: <div className="text-gray-700  leading-relaxed font-semibold text-xl">Your AI Green Assistant for Daily Shopping
+<br/><li>Compares eco products on price, quality, availability in real-time.</li><li>Promotes Group Buying: Clusters orders by location/interest to cut emissions 35%.</li><li>Offers subscription boxes for groceries
+from local vendors — with minimal
+packaging waste.</li></div>
     },
     {
       name: 'Repack AI',
       description: 'Intelligent sustainable packaging solutions',
-      icon: '📦',
+      icon: <PackageCheck className='h-10 w-10'/>,
       color: 'bg-teal-100 text-teal-800',
-      modalContent: '[Add content here for Repack AI]'
+      modalContent: <div className="text-gray-700  leading-relaxed font-semibold text-xl">AI That Rethinks Packaging to Cut Plastic Waste
+<br/><li>Uses 3D vision + LLMs to suggest optimized box
+sizes.</li><li>Auto-generates disposal instructions via QR
+codes.</li><li>Helps Amazon save money, and the planet, on
+packaging.</li><li>Packaging Intelligence Portal: Sellers get AI
+suggestions (e.g.,
+"Switch to seed paper: save
+₹3/unit").</li></div>
     },
     {
-      name: 'Carbon Karma',
+      name: 'CarbonKarma AI',
       description: 'Real-time carbon tracking and offset recommendations',
-      icon: '🌱',
+      icon: <CloudCheck className='h-10 w-10'/>,
       color: 'bg-lime-100 text-lime-800',
-      modalContent: '[Add content here for Carbon Karma]'
+      modalContent: <div className="text-gray-700  leading-relaxed font-semibold text-xl">AI That Tracks Your Carbon Footprint, Product
+by Product.
+<br/><li>Checks carbon emission of products via LLM +
+photo input.</li><li>Adds emotional motivation for users to choose
+wisely.</li><li>Impact Dashboard: Real-time CO₂/waste
+reduction metrics (e.g.,
+"You saved 12kg CO₂ = 3
+tree seedlings").</li></div>
     },
     {
       name: 'EcoChain Trace',
       description: 'AI-powered supply chain transparency and sustainability',
-      icon: '🔗',
+      icon: <ScanBarcode className='h-10 w-10'/>,
       color: 'bg-cyan-100 text-cyan-800',
-      modalContent: '[Add content here for EcoChain Trace]'
+      modalContent: <div className="text-gray-700  leading-relaxed font-semibold text-xl">Blockchain for Trust in Green Products<br/><li>Blockchain-based eco product certification &
+rating.</li><li>Transparent product history (how, where,
+what it’s made of).
+</li><li>Brands can’t fake green anymore — buyers
+know what's real.</li><li>GreenScore™: Blockchain-backed product
+grading (A++ to D)
+analyzing materials, supply chain, and
+certifications.
+</li></div>
     }
   ];
 
@@ -563,7 +590,7 @@ Empowers small/local eco-friendly sellers to access Amazon without paperwork ove
                 <div className="mt-6">
                   <button 
                     onClick={() => openModal(index)}
-                    className="text-green-600 font-semibold hover:text-green-700 transition-colors"
+                    className="text-green-600 font-semibold hover:text-green-700 transition-colors cursor-pointer"
                   >
                     Learn More →
                   </button>
@@ -635,11 +662,11 @@ Empowers small/local eco-friendly sellers to access Amazon without paperwork ove
             {faqData.map((faq, index) => (
               <div key={index} className="bg-gray-50 rounded-2xl overflow-hidden">
                 <button
-                  className="w-full p-6 text-left flex items-center justify-between hover:bg-gray-100 transition-colors"
+                  className="w-full p-6 text-left flex items-center justify-between hover:bg-gray-100 transition-all duration-300"
                   onClick={() => toggleFAQ(index)}
                 >
                   <h3 className="text-lg font-semibold text-gray-800 pr-4">{faq.question}</h3>
-                  <div className={`text-green-600 transform transition-transform duration-200 ${
+                  <div className={`text-green-600 transform transition-transform duration-300 ${
                     openFAQ === index ? 'rotate-180' : ''
                   }`}>
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -670,7 +697,7 @@ Empowers small/local eco-friendly sellers to access Amazon without paperwork ove
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-green-600 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors">
-              Explore AI Tools
+              Explore Our Impact
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-green-600 transition-colors">
               Download Guide
@@ -681,8 +708,8 @@ Empowers small/local eco-friendly sellers to access Amazon without paperwork ove
 
       {/* Modal Overlay */}
       {activeModal !== null && (
-        <div className="fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-lg shadow-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg shadow-lg max-w-4xl w-full max-h-[80vh] overflow-y-auto">
             <div className="p-6">
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-2xl font-bold text-green-800">
@@ -690,7 +717,7 @@ Empowers small/local eco-friendly sellers to access Amazon without paperwork ove
                 </h2>
                 <button
                   onClick={closeModal}
-                  className="text-gray-400 hover:text-gray-600 transition-colors"
+                  className="text-gray-400 hover:text-gray-600 transition-colors cursor-pointer"
                 >
                   <X className="h-6 w-6" />
                 </button>
@@ -701,15 +728,14 @@ Empowers small/local eco-friendly sellers to access Amazon without paperwork ove
                   {aiTools[activeModal].icon}
                 </div>
                 
-                <div className="text-gray-700 leading-relaxed whitespace-pre-line">
+                
                   {aiTools[activeModal].modalContent}
-                </div>
               </div>
               
               <div className="mt-8 flex justify-end">
                 <button
                   onClick={closeModal}
-                  className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors"
+                  className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors cursor-pointer"
                 >
                   Close
                 </button>
