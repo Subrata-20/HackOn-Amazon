@@ -60,7 +60,7 @@ GreenGather makes sustainable shopping convenient, affordable, and engaging.
 *   **Green Coin Economy:** A rewards system where users earn "Green Coins" for making sustainable choices, redeemable for discounts on future purchases.
 
 ---
-![flow1](https://github.com/user-attachments/assets/39fb680d-609c-425d-a532-22624b626e2c)
+![flow1_re](https://github.com/user-attachments/assets/0e0770ae-4bcb-42e0-9309-2020bc0e6b92)
 
 ## 🏛️ System Architecture
 
