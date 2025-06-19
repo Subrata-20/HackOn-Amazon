@@ -18,6 +18,7 @@ import { Toaster } from 'react-hot-toast';
 import Impact from './pages/Impact.jsx';
 import CheckoutPage from './pages/CheckoutPage.jsx';
 import Orders from './pages/Orders.jsx';
+import Education from './pages/Education.jsx';
 
 
 const App = () => {
@@ -38,6 +39,7 @@ const App = () => {
         <Route path="/impact" element={<Impact/>}/>
         <Route path="/check-out" element={<CheckoutPage/>}/>
         <Route path="/orders" element={<Orders/>}/>
+        <Route path="/edu" element={<Education/>}/>
       </Routes>
       <Footer/>
       <ToastContainer/>

@@ -145,6 +145,7 @@ const Header = ({ cartItemCount, onCartClick }) => {
         <a href="#" className="text-white hover:text-green-300">Gift Cards</a>
         <a href="#" className="text-white hover:text-green-300">Sell Sustainable</a>
         <Link to="/impact" className="text-white hover:text-green-300">Our Impact</Link>
+        <Link to="/edu" className="text-white hover:text-green-300">Sustainability</Link>
     </div>
     <div className="flex items-center space-x-6 text-sm mr-2">
         <div className='flex items-center text-white hover:text-green-300'>
