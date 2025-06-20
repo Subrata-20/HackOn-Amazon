@@ -22,8 +22,9 @@ GreenX is a full-stack AI and Blockchain ecosystem integrated into Amazon to sol
 *   **RePack AI for Waste Reduction:** A 3D vision system (PyTorch3D) that calculates optimal packaging sizes and provides intelligent recycling/disposal guides.
 *   **CarbonKarma AI for Impact Tracking:** A multi-modal AI that estimates a product's carbon footprint from images or text, displayed on a personal user dashboard.
 *   **GreenCoin Rewards System:** A gamified economy where users earn and redeem coins for making sustainable choices, fostering engagement and loyalty.
+---
 
-### Features
+### Other Achieved Features
 *   **Establish Verifiable Trust with an Advanced AI Grading System:** Eliminate greenwashing with a hybrid AI grading system combining images, text, and metadata. NLP (e.g., Gemini) verifies sustainability claims, vision models (e.g., CLIP, YOLOv8) detect packaging and eco-labels, and GNNs analyze supply chain data. Grading uses GreenScore™-style weighted logic with AI-powered claim checks and missing data inference—secured on a blockchain-backed ledger.
 
 *   **Deliver Hyper-Personalized Recommendations with an LLM-Powered Assistant:** Implement an advanced recommendation system, **GreenGather AI**, that goes beyond simple suggestions. It uses LLMs to understand user behavior and values, suggesting sustainable alternatives, organizing low-emission group buys, and personalizing the entire green shopping journey. **HSTU — "Actions Speak Louder than Words: Trillion‑Parameter Sequential Transducers for Generative Recommendations"**, Zhai et al., arXiv (Feb 2024). [📄 Full paper](https://arxiv.org/abs/2402.17152)
@@ -34,12 +35,13 @@ GreenX is a full-stack AI and Blockchain ecosystem integrated into Amazon to sol
 
 *   **Drive Engagement Through Gamified Impact Tracking:** Incentivize sustainable behavior with **CarbonKarma AI** and the `GreenCoin` rewards system. This feature provides real-time carbon footprint analysis from product data and empowers users with a personal dashboard, turning climate action into a rewarding and transparent experience.<!-- filepath: c:\Users\Asus\Desktop\new_projects\hack on backend\readme.md -->
 
+---
 
 ## 💡 PROJECT OVERVIEW
 
 GreenX is a suite of five specialized AI and Blockchain modules that work in concert to create a transparent, efficient, and rewarding sustainable marketplace. It's not a single monolithic AI; it's a precise, modular ecosystem built for scale and accuracy.
 
-### Key Features
+### Key AI Features
 
 #### 🔗 1. EcoChain Trace: Blockchain for Verifiable Trust
 EcoChain provides an immutable, transparent ledger for product certification. It ends greenwashing by giving every eco-product a verifiable history.
