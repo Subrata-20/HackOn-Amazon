@@ -10,7 +10,7 @@ import RepackAI from './pages/RepackAI.jsx';
 import GreenGather from './pages/GreenGatherAI.jsx';
 import UserDashboard from './pages/UserDashboard.jsx';
 import Cart from './pages/Cart.jsx';
-import { CartProvider } from './context/CartContext.jsx';
+import { useCart } from './context/CartContext.jsx';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ApplyCertificate from './pages/Applyfoecertecochain.jsx';
@@ -22,10 +22,10 @@ import Education from './pages/Education.jsx';
 
 
 const App = () => {
+  const {cart} = useCart();
   return (
     <>
-    <CartProvider>
-      <Header cartItemCount={3} onCartClick={() => {}} />
+      <Header cartItemCount={cart.length} onCartClick={() => {}} />
       <Routes> 
         <Route path="/ecosense-ai" element={<Ecosenseai/>} />
         <Route path="/" element={<Home/>} /> 
@@ -43,7 +43,7 @@ const App = () => {
       </Routes>
       <Footer/>
       <ToastContainer/>
-      </CartProvider>
+      
       <Toaster/>
       </>
   );
