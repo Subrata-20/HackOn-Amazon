@@ -7,7 +7,9 @@
 ![License](https://img.shields.io/badge/License-MIT-blue)
 ![Platform](https://img.shields.io/badge/Platform-AWS%20%7C%20React%20%7C%20Python-orange)
 
-GreenX is a full-stack AI and Blockchain ecosystem integrated into Amazon to solve the critical challenges of sustainable e-commerce. It transforms the shopping experience by providing verifiable trust, intelligent waste reduction, and powerful incentives for both consumers and sellers.
+GreenX is a full-stack AI and Blockchain ecosystem integrated into Amazon to solve the critical challenges of sustainable e-commerce. It transforms the shopping experience by providing Adv. Recommendation system, Product Grading System, verifiable trust, intelligent waste reduction, and powerful incentives for both consumers and sellers.
+
+*OUR MAIN TARGET IS END-TO-END SOLUTION TO THE PROBLEM OF THE CUSTOMER AND THE SELLER 
 
 ---
 
