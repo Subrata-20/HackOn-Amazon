@@ -155,3 +155,69 @@ To run this project locally, follow these steps:
 -   Data and statistics were compiled from reports by TERI, CPCB India, McKinsey, YouGov, and The Economic Times.
 -   Inspiration from leaders in the sustainability space like Loopify and Clarity AI.
 -   Built with the power of AWS, PyTorch, and the open-source community.
+
+## 🌍 Vision & Impact
+
+### 🔭 Our Vision
+
+At **GreenX**, we envision a world where **sustainability is not a luxury, but the default** — seamlessly integrated into everyday shopping.  
+Our mission is to empower **eco-conscious consumers**, **local green businesses**, and **CSR-driven corporations** through an AI-powered, transparent, and rewarding ecosystem embedded into Amazon's marketplace.
+
+We aim to make **Amazon the global leader in sustainable commerce**, where every purchase is:
+- Authenticated through blockchain,
+- Optimized with AI,
+- And rewarded with real-world impact.
+
+---
+
+### 💥 The Impact We Strive For
+
+#### 🛍️ Greener Shopping Experiences
+- ✅ Eliminate greenwashing using **EcoChain Trace** (blockchain certification)
+- ✅ Showcase **GreenScore™ badges** for product transparency
+- ✅ End-to-end sustainability with **five specialized AIs**
+
+#### 🚚 Sustainable Logistics
+- ♻️ Reduce plastic waste and emissions via **RePack AI** and **CarbonKarma AI**
+- 📦 Promote **optimized packaging** and **group buying** to reduce delivery waste
+
+#### 🎮 Gamified Behavior Change
+- 🪙 Introduce **GreenCoin** rewards for eco-friendly actions
+- 🏆 Weekly **leaderboards** and personal **impact dashboards** drive engagement
+
+#### 👨‍🌾 Empowering Small Sellers
+- 🔓 Paperless seller onboarding using **EcoSense AI**
+- 🛍️ Visibility for local artisans and small green businesses
+
+#### 📈 Scalable Global Impact
+- 🌐 Phase 1: India-first rollout on Amazon.in (150M+ users)
+- 🚀 Phase 2: Global expansion using AWS and AI APIs
+- 🧩 Phase 3: API monetization — GreenX as an industry standard
+
+---
+
+### 📊 Key Metrics & Goals
+
+| Goal                          | Target Value                          |
+|------------------------------|---------------------------------------|
+| 🌱 CO₂ Reduction              | 100,000+ tons/year                    |
+| 📦 Plastic Packaging Cut     | 50% reduction (Phase 1)               |
+| 🧑‍🌾 Sustainable Sellers      | 1M+ onboarded within 3 years          |
+| 💰 Packaging Cost Savings     | ₹1,200 Cr/year for Amazon             |
+| 🔁 Circular Commerce          | 40M+ monthly returns reused/resold    |
+
+---
+
+### 💡 Why GreenX Matters
+
+GreenX isn’t just a sustainability feature — it's a **full-stack solution** that transforms how India and the world shops.  
+We are redefining e-commerce with:
+
+- ✅ **AI-first architecture**
+- ✅ **Blockchain-backed trust**
+- ✅ **Gamified engagement**
+- ✅ **Seller empowerment**
+- ✅ **Global scalability**
+
+> **From cart to climate action — GreenX is not just a product, it's a movement.**
+
