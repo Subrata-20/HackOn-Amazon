@@ -25,11 +25,11 @@ GreenX is a full-stack AI and Blockchain ecosystem integrated into Amazon to sol
 ---
 
 ### Other Achieved Features
-*   **Establish Verifiable Trust with an Advanced AI Grading System:** Eliminate greenwashing with a hybrid AI grading system combining images, text, and metadata. NLP (e.g., Gemini) verifies sustainability claims, vision models (e.g., CLIP, YOLOv8) detect packaging and eco-labels, and GNNs analyze supply chain data. Grading uses GreenScore™-style weighted logic with AI-powered claim checks and missing data inference—secured on a blockchain-backed ledger.
+*   **Establish Verifiable Trust with an Advanced AI Grading System:** Eliminate greenwashing with a hybrid AI grading system combining images, text, and metadata. NLP (via LLM) verifies sustainability claims, vision models (e.g., CLIP, YOLOv8) detect packaging and eco-labels, and GNNs analyze supply chain data. Grading uses GreenScore™-style weighted logic with AI-powered claim checks and missing data inference—secured on a blockchain-backed ledger.
 
 *   **Deliver Hyper-Personalized Recommendations with an LLM-Powered Assistant:** Implement an advanced recommendation system, **GreenGather AI**, that goes beyond simple suggestions. It uses LLMs to understand user behavior and values, suggesting sustainable alternatives, organizing low-emission group buys, and personalizing the entire green shopping journey. **HSTU — "Actions Speak Louder than Words: Trillion‑Parameter Sequential Transducers for Generative Recommendations"**, Zhai et al., arXiv (Feb 2024). [📄 Full paper](https://arxiv.org/abs/2402.17152)
 
-*   **Ensure Marketplace Integrity with AI-Powered Security:** Automate seller verification and fraud detection using **EcoSense AI**. This system leverages **AWS Rekognition** for robust identity verification and secures all sensitive data with enterprise-grade **AES-256 encryption** to build a safe and trustworthy platform.
+*   **Ensure Marketplace Integrity with AI-Powered Security:** Automate seller verification and fraud detection using **EcoSense AI**. This system leverages **AWS Rekognition** for robust identity verification and secures all sensitive data with enterprise-grade **AWS-KMS encryption** to build a safe and trustworthy platform.
 
 *   **Engineer Radical Waste Reduction with 3D Vision:** Drastically cut down on plastic and material waste by implementing **RePack AI**. This system uses **3D Computer Vision (PyTorch3D)** to calculate optimal packaging sizes, minimizing waste, and employs graph algorithms to create efficient, low-carbon return logistics.
 
