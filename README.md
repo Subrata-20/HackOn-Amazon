@@ -74,17 +74,18 @@ GreenGather makes sustainable shopping convenient, affordable, and engaging.
 *   **Green Coin Economy:** A rewards system where users earn "Green Coins" for making sustainable choices, redeemable for discounts on future purchases.
 
 ---
-![flow1_re](https://github.com/user-attachments/assets/0e0770ae-4bcb-42e0-9309-2020bc0e6b92)
 
-## 🏛️ System Architecture
 
-GreenX is built on a modern, scalable, and decoupled architecture. The frontend (React) communicates with a backend (Python) via a REST API, which orchestrates the various AI/ML and Blockchain services.
+## ⚡ System Architecture
+
+GreenX is built on a modern, scalable, and decoupled architecture. The frontend (React) communicates with a backend (Python) via a Flask, which orchestrates the various AI/ML and Blockchain services and AWS supported element.
 
 -   **Frontend:** A responsive React application provides a seamless user interface for all GreenX features.
 -   **Backend API Gateway:** A central Python (Flask/FastAPI) application that serves as the brain, routing requests to the appropriate micro-service or AI model.
 -   **AI/ML Services:** Each AI module (EcoSense, CarbonKarma, etc.) is a specialized service, allowing for independent scaling and updates.
--   **Data Layer:** A hybrid data storage approach using SQL for structured data and AWS S3 for unstructured data like images and documents.
+-   **Data Layer:** A hybrid data storage approach using SQL for structured data and AWS S3, KMS for unstructured data like images and documents.
 -   **Blockchain Network:** An Ethereum-based network for managing the EcoChain Trace certifications and GreenScore™.
+![flow1_re](https://github.com/user-attachments/assets/0e0770ae-4bcb-42e0-9309-2020bc0e6b92)
 
 ### 🤖 Personalized AI Recommendations: Smarter, Greener, and Hyper-Relevant
 
