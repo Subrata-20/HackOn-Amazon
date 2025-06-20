@@ -24,7 +24,7 @@ GreenX is a full-stack AI and Blockchain ecosystem integrated into Amazon to sol
 *   **GreenCoin Rewards System:** A gamified economy where users earn and redeem coins for making sustainable choices, fostering engagement and loyalty.
 
 ### Features
-*   **Establish Verifiable Trust with an Advanced AI Grading System:** Eliminate greenwashing by deploying a multi-modal AI grading engine. This system uses **Natural Language Processing (NLP)** with Transformers (like Gemini) to analyze product descriptions and reviews, and **Computer Vision (CNNs, YOLOv8)** to verify eco-labels and packaging materials from images, with all results secured on a blockchain.
+*   **Establish Verifiable Trust with an Advanced AI Grading System:** Eliminate greenwashing with a hybrid AI grading system combining images, text, and metadata. NLP (e.g., Gemini) verifies sustainability claims, vision models (e.g., CLIP, YOLOv8) detect packaging and eco-labels, and GNNs analyze supply chain data. Grading uses GreenScore™-style weighted logic with AI-powered claim checks and missing data inference—secured on a blockchain-backed ledger.
 
 *   **Deliver Hyper-Personalized Recommendations with an LLM-Powered Assistant:** Implement an advanced recommendation system, **GreenGather AI**, that goes beyond simple suggestions. It uses LLMs to understand user behavior and values, suggesting sustainable alternatives, organizing low-emission group buys, and personalizing the entire green shopping journey. **HSTU — "Actions Speak Louder than Words: Trillion‑Parameter Sequential Transducers for Generative Recommendations"**, Zhai et al., arXiv (Feb 2024). [📄 Full paper](https://arxiv.org/abs/2402.17152)
 
@@ -84,9 +84,9 @@ GreenX is built on a modern, scalable, and decoupled architecture. The frontend 
 -   **Data Layer:** A hybrid data storage approach using SQL for structured data and AWS S3 for unstructured data like images and documents.
 -   **Blockchain Network:** An Ethereum-based network for managing the EcoChain Trace certifications and GreenScore™.
 
-### 🤖 Personalized AI Recommendations: Greener Choices, Tailored to You
+### 🤖 Personalized AI Recommendations: Smarter, Greener, and Hyper-Relevant
 
-GreenX leverages the power of **LLMs and behavioral AI** to deliver real-time, **personalized recommendations** that align with each user’s values and needs.
+GreenX combines **Generative LLMs, reinforcement learning, multi-armed bandits, and graph-based ranking** to deliver cutting-edge, real-time recommendations tailored for sustainability-conscious shoppers.
 
 - 🛒 Suggests **eco-friendly alternatives** to frequently browsed or purchased items.
 - 🌿 Calculates and displays the **environmental impact per product** (via **CarbonKarma AI**) — helping users make smarter, low-carbon decisions.
@@ -145,6 +145,26 @@ Our **Reuse & Return Engine** empowers users to seamlessly **resell, donate, or 
 
 ![returnpackage (1)](https://github.com/user-attachments/assets/97557317-dbe1-4c80-987c-35310d67edbc)
 
+### 🧠 Advanced AI Grading System: Beyond Labels, Built on Logic
+
+GreenX eliminates greenwashing with a hybrid AI grading engine that blends multi-modal analysis, machine learning, and blockchain verification.
+
+*   **Multi-Modal Intelligence:**
+    Analyzes product **images** (packaging, labels), **text** (descriptions, reviews), and **metadata** (supply chain data) using models like **CLIP, YOLOv8, and Gemini**.
+
+*   **GreenScore™ Engine:**
+    Grades products from **A++ to D** based on 8 key sustainability metrics. It uses **NLP** to verify claims, detect greenwashing, and employs **ML fallback models** to intelligently infer missing data.
+
+*   **Blockchain Certification:**
+    The final `GreenScore™` and its supporting data are recorded on a blockchain ledger, creating a **tamper-proof certificate** for each product. This enables transparent audits and displays a trustworthy badge directly on the product page.
+
+
+
+>🌱 **No more greenwashing. No more guesswork. Just transparent, verified, and AI-evaluated eco-grades — shown directly at the point of purchase.**### 🧠 Advanced AI Grading System: Beyond Labels, Built on Logic
+
+![diagram-export-6-21-2025-12_59_10-AM 1](https://github.com/user-attachments/assets/b6f6d678-cff5-44a4-acfb-3896131d9005)
+
+---
 
 ## 🛠️ Tech Stack & Rationale
 
