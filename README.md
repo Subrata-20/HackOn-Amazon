@@ -134,7 +134,7 @@ GreenX brings **transparency and trust** to sustainable shopping with **EcoChain
 
 > With EcoChain Trace, greenwashing becomes impossible. Only **truly sustainable products** earn visibility, trust, and conversion — certified on-chain.
 
-![ProductVerification](https://github.com/user-attachments/assets/9a83ac39-d251-4f5f-bb3f-d69ca6e77fd2)
+![ProductVerification](https://github.com/user-attachments/assets/83218e92-35eb-44c2-b638-8dfcb0776ad7)
 
 ### 📦 Reuse & Return Engine: Closing the Loop on E-Waste
 
