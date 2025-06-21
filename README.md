@@ -98,7 +98,6 @@ GreenX combines **Generative LLMs, reinforcement learning, multi-armed bandits, 
 
 > Every product you see isn’t just relevant — it’s responsible. GreenX makes sustainable shopping **frictionless, intelligent, and personal.**
 
-![Recommendation](https://github.com/user-attachments/assets/f905efcc-8846-4526-b006-efb8eaaf66bd)
 ![recommen](https://github.com/user-attachments/assets/15470bb6-df2e-4b90-a36d-9594e11567ad)
 
 
@@ -180,7 +179,7 @@ We chose each technology for its specific strengths in building a scalable, AI-d
 | :------------ | :--------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
 | **Frontend**  | React.js, Tailwind CSS                   | **React** for building a fast, component-based, and dynamic user interface. **Tailwind CSS** for rapid, utility-first styling.         |
 | **Backend**   | Python (Flask, FastAPI)                  | **Python** is the industry standard for AI/ML. **Flask/FastAPI** provides a lightweight and high-performance framework for building APIs. |
-| **Database**  | MySQL, AWS S3                            | **MySQL** for robust, scalable, and ACID-compliant storage of structured data (users, products). **AWS S3** for durable object storage. |
+| **Database**  | SQL, AWS S3                            | **SQL** for robust, scalable, and ACID-compliant storage of structured data (users, products). **AWS S3** for durable object storage. |
 | **AI/ML**     | PyTorch3D, OpenCV, Transformers, Gemini  | **PyTorch3D** for 3D vision (RePack AI). **OpenCV** for image processing. **Transformers/Gemini** for advanced NLP (CarbonKarma AI). |
 | **Cloud/AWS** | Rekognition, KMS, S3                     | **AWS Rekognition** for managed, powerful face comparison. **AWS KMS** for secure key management and encryption. **S3** for object storage. |
 | **Blockchain**| Ethereum                                 | **Ethereum** for its robust smart contract capabilities, enabling the creation of our immutable certification and token (Green Coin) system. |
@@ -244,57 +243,9 @@ To run this project locally, follow these steps:
 
 ---
 
-## 👥 Team Members
 
--   **Bisal Prasad**
--   **Chinmoy Dutta**
--   **Subrata Lodh**
 
-## 🙏 Acknowledgments
 
--   Data and statistics were compiled from reports by TERI, CPCB India, McKinsey, YouGov, and The Economic Times.
--   Inspiration from leaders in the sustainability space like Loopify and Clarity AI.
--   Built with the power of AWS, PyTorch, and the open-source community.
-
-## 🌍 Vision & Impact
-
-### 🔭 Our Vision
-
-At **GreenX**, we envision a world where **sustainability is not a luxury, but the default** — seamlessly integrated into everyday shopping.  
-Our mission is to empower **eco-conscious consumers**, **local green businesses**, and **CSR-driven corporations** through an AI-powered, transparent, and rewarding ecosystem embedded into Amazon's marketplace.
-
-We aim to make **Amazon the global leader in sustainable commerce**, where every purchase is:
-- Authenticated through blockchain,
-- Optimized with AI,
-- And rewarded with real-world impact.
-
----
-
-### 💥 The Impact We Strive For
-
-#### 🛍️ Greener Shopping Experiences
-- ✅ Eliminate greenwashing using **EcoChain Trace** (blockchain certification)
-- ✅ Showcase **GreenScore™ badges** for product transparency
-- ✅ End-to-end sustainability with **five specialized AIs**
-
-#### 🚚 Sustainable Logistics
-- ♻️ Reduce plastic waste and emissions via **RePack AI** and **CarbonKarma AI**
-- 📦 Promote **optimized packaging** and **group buying** to reduce delivery waste
-
-#### 🎮 Gamified Behavior Change
-- 🪙 Introduce **GreenCoin** rewards for eco-friendly actions
-- 🏆 Weekly **leaderboards** and personal **impact dashboards** drive engagement
-
-#### 👨‍🌾 Empowering Small Sellers
-- 🔓 Paperless seller onboarding using **EcoSense AI**
-- 🛍️ Visibility for local artisans and small green businesses
-
-#### 📈 Scalable Global Impact
-- 🌐 Phase 1: India-first rollout on Amazon.in (150M+ users)
-- 🚀 Phase 2: Global expansion using AWS and AI APIs
-- 🧩 Phase 3: API monetization — GreenX as an industry standard
-
----
 
 ### 🤝 Small Business & B2B Collaboration: Powering the Sustainable Supply Chain
 
@@ -331,16 +282,17 @@ GreenX enables businesses to trade carbon offsets using smart contracts:
 > From traceability to certification to carbon offsetting — GreenX makes **sustainability scalable, collaborative, and monetizable** across the B2B landscape.
 
 ---
+## 🌍 Vision & Impact
 
-### 📊 Key Metrics & Goals
+### 🔭 Our Vision
 
-| Goal                          | Target Value                          |
-|------------------------------|---------------------------------------|
-| 🌱 CO₂ Reduction              | 100,000+ tons/year                    |
-| 📦 Plastic Packaging Cut     | 50% reduction (Phase 1)               |
-| 🧑‍🌾 Sustainable Sellers      | 1M+ onboarded within 3 years          |
-| 💰 Packaging Cost Savings     | ₹1,200 Cr/year for Amazon             |
-| 🔁 Circular Commerce          | 40M+ monthly returns reused/resold    |
+At **GreenX**, we envision a world where **sustainability is not a luxury, but the default** — seamlessly integrated into everyday shopping.  
+Our mission is to empower **eco-conscious consumers**, **local green businesses**, and **CSR-driven corporations** through an AI-powered, transparent, and rewarding ecosystem embedded into Amazon's marketplace.
+
+We aim to make **Amazon the global leader in sustainable commerce**, where every purchase is:
+- Authenticated through blockchain,
+- Optimized with AI,
+- And rewarded with real-world impact.
 
 ---
 
@@ -356,4 +308,20 @@ We are redefining e-commerce with:
 - ✅ **Global scalability**
 
 > **From cart to climate action — GreenX is not just a product, it's a movement.**
+
+
+## 🙏 Acknowledgments
+
+-   Data and statistics were compiled from reports by TERI, CPCB India, McKinsey, YouGov, and The Economic Times.
+-   Inspiration from leaders in the sustainability space like Loopify and Clarity AI.
+-   Built with the power of AWS, PyTorch, and the open-source community,HSTU(arXiv (Feb 2024). [📄 Full paper](https://arxiv.org/abs/2402.17152))
+
+  
+  ## 👥 Team Members
+
+-   **Bisal Prasad**
+-   **Chinmoy Dutta**
+-   **Subrata Lodh**
+
+
 
