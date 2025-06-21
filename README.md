@@ -167,7 +167,8 @@ GreenX eliminates greenwashing with a hybrid AI grading engine that blends multi
 
 >🌱 **No more greenwashing. No more guesswork. Just transparent, verified, and AI-evaluated eco-grades — shown directly at the point of purchase.**### 🧠 Advanced AI Grading System: Beyond Labels, Built on Logic
 
-![diagram-export-6-21-2025-12_59_10-AM 1](https://github.com/user-attachments/assets/b6f6d678-cff5-44a4-acfb-3896131d9005)
+![grading](https://github.com/user-attachments/assets/8bb644c1-8cd0-4fec-a294-f4a23fb982de)
+
 
 ---
 
