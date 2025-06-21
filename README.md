@@ -112,7 +112,7 @@ To ensure only genuine eco-friendly products reach customers, GreenX introduces 
 
 > With EcoSense AI, we eliminate fraud, empower local artisans, and unlock a trusted marketplace for truly sustainable products.
 
-![SellerVerification](https://github.com/user-attachments/assets/f49e4dda-9ae8-4e01-87f8-0ce8331f2928)
+![SellerVerification](https://github.com/user-attachments/assets/3e285439-f68c-42e9-81dc-e2b99a24fb12)
 
 ### 🔗 Product Verification & Eco-Listing: Powered by EcoChain Trace (Blockchain)
 
