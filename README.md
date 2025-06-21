@@ -99,6 +99,8 @@ GreenX combines **Generative LLMs, reinforcement learning, multi-armed bandits, 
 > Every product you see isn’t just relevant — it’s responsible. GreenX makes sustainable shopping **frictionless, intelligent, and personal.**
 
 ![Recommendation](https://github.com/user-attachments/assets/f905efcc-8846-4526-b006-efb8eaaf66bd)
+![recommen](https://github.com/user-attachments/assets/15470bb6-df2e-4b90-a36d-9594e11567ad)
+
 
 ### 🛍️ Seller Registration and Verification System: Trust Built with AI
 
