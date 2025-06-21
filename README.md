@@ -86,6 +86,7 @@ GreenX is built on a modern, scalable, and decoupled architecture. The frontend 
 -   **Data Layer:** A hybrid data storage approach using SQL for structured data and AWS S3, KMS for unstructured data like images and documents.
 -   **Blockchain Network:** An Ethereum-based network for managing the EcoChain Trace certifications and GreenScore™.
 ![flow1_re](https://github.com/user-attachments/assets/0e0770ae-4bcb-42e0-9309-2020bc0e6b92)
+---
 
 ### 🤖 Personalized AI Recommendations: Smarter, Greener, and Hyper-Relevant
 
@@ -99,6 +100,7 @@ GreenX combines **Generative LLMs, reinforcement learning, multi-armed bandits, 
 > Every product you see isn’t just relevant — it’s responsible. GreenX makes sustainable shopping **frictionless, intelligent, and personal.**
 
 ![recommen](https://github.com/user-attachments/assets/15470bb6-df2e-4b90-a36d-9594e11567ad)
+---
 
 
 ### 🛍️ Seller Registration and Verification System: Trust Built with AI
@@ -113,6 +115,8 @@ To ensure only genuine eco-friendly products reach customers, GreenX introduces 
 > With EcoSense AI, we eliminate fraud, empower local artisans, and unlock a trusted marketplace for truly sustainable products.
 
 ![SellerVerification](https://github.com/user-attachments/assets/f49e4dda-9ae8-4e01-87f8-0ce8331f2928)
+
+---
 
 ### 🔗 Product Verification & Eco-Listing: Powered by EcoChain Trace (Blockchain)
 
@@ -135,6 +139,8 @@ GreenX brings **transparency and trust** to sustainable shopping with **EcoChain
 
 ![ProductVerification](https://github.com/user-attachments/assets/9a83ac39-d251-4f5f-bb3f-d69ca6e77fd2)
 
+---
+
 ### 📦 Reuse & Return Engine: Closing the Loop on E-Waste
 
 GreenX transforms Amazon's 40M+ monthly product returns from a waste challenge into a circular opportunity.  
@@ -148,6 +154,8 @@ Our **Reuse & Return Engine** empowers users to seamlessly **resell, donate, or 
 > What was once a return is now a chance to reduce impact, extend product life, and support circular shopping — all inside your Amazon account.
 
 ![returnpackage (1)](https://github.com/user-attachments/assets/97557317-dbe1-4c80-987c-35310d67edbc)
+
+---
 
 ### 🧠 Advanced AI Grading System: Beyond Labels, Built on Logic
 
