@@ -329,6 +329,8 @@ GreenX enables businesses to trade carbon offsets using smart contracts:
 
 > From traceability to certification to carbon offsetting — GreenX makes **sustainability scalable, collaborative, and monetizable** across the B2B landscape.
 
+![B2B](https://github.com/user-attachments/assets/3a406ec7-3834-4575-82d3-bd96c32e9e36)
+
 ---
 
 ### 📊 Key Metrics & Goals
