@@ -148,7 +148,7 @@ Our **Reuse & Return Engine** empowers users to seamlessly **resell, donate, or 
 
 > What was once a return is now a chance to reduce impact, extend product life, and support circular shopping — all inside your Amazon account.
 
-![returnpackage (1)](https://github.com/user-attachments/assets/97557317-dbe1-4c80-987c-35310d67edbc)
+![ProductVerification](https://github.com/user-attachments/assets/83218e92-35eb-44c2-b638-8dfcb0776ad7)
 
 ### 🧠 Advanced AI Grading System: Beyond Labels, Built on Logic
 
