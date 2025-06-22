@@ -13,6 +13,9 @@
 
 **OUR MAIN TARGET IS END-TO-END SOLUTION TO THE PROBLEM OF THE CUSTOMER AND THE SELLER**
 
+▶️ [Watch the demo video](https://github.com/user-attachments/assets/65fa26d3-c692-4b16-a318-3c1a9aee7803)
+
+
 ---
 ### Key Objectives
 
