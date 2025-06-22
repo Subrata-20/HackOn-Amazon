@@ -56,11 +56,19 @@ EcoChain provides an immutable, transparent ledger for product certification. It
 
 
 
+
+
 #### ✅ 2. EcoSense AI: AI for Seller Validation & Fraud Detection
 EcoSense automates the onboarding of genuine eco-sellers, ensuring the integrity of the GreenX marketplace.
 *   **AI-Powered Verification:** Uses **AWS Rekognition** and PhotoDNA to compare seller selfies with official documents, preventing identity fraud.
 *   **Secure Data Handling:** All sensitive seller data (PAN, GST) is encrypted using **AES-256 via AWS KMS**, ensuring enterprise-grade security.
 *   **Route Optimization:** Uses Dijkstra's algorithm to suggest the most efficient logistics routes for new sellers.
+
+
+
+
+https://github.com/user-attachments/assets/96821d20-fb55-456f-9b86-3b0520c5b44d
+
 
 
 
