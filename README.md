@@ -41,6 +41,8 @@
 
 GreenX is a suite of five specialized AI and Blockchain modules that work in concert to create a transparent, efficient, and rewarding sustainable marketplace. It's not a single monolithic AI; it's a precise, modular ecosystem built for scale and accuracy.
 
+https://github.com/user-attachments/assets/65fa26d3-c692-4b16-a318-3c1a9aee7803
+
 ### Key AI Features
 
 #### 🔗 1. EcoChain Trace: Blockchain for Verifiable Trust
@@ -72,6 +74,17 @@ GreenGather makes sustainable shopping convenient, affordable, and engaging.
 *   **AI Recommendation Engine:** Provides personalized suggestions for eco-friendly products based on user behavior and carbon impact.
 *   **Group Buying:** Clusters orders by location to reduce delivery emissions and offers discounts for participation.
 *   **Green Coin Economy:** A rewards system where users earn "Green Coins" for making sustainable choices, redeemable for discounts on future purchases.
+
+
+https://github.com/user-attachments/assets/45e5b0d8-871d-4b84-a847-ab52f1708251
+
+
+
+
+
+
+
+
 
 ---
 
