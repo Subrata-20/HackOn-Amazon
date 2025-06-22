@@ -317,12 +317,21 @@ const EcoProductCard = ({ product }) => {
           )}
         </div>
 
-        <button
-          onClick={handleAddToCart}
-          className="w-full bg-green-600 text-white font-semibold py-2.5 rounded-lg hover:bg-green-700 transition-colors"
-        >
-          Add to Cart
-        </button>
+        <div className="space-y-2">
+  <button
+    onClick={handleAddToCart}
+    className="w-full bg-green-600 text-white font-semibold py-2.5 rounded-lg hover:bg-green-700 transition-colors"
+  >
+    Add to Cart
+  </button>
+
+  <button
+    onClick={() => toast.info("Feedback sent!")}
+    className="w-full border border-gray-300 bg-yellow-400 text-gray-700 font-semibold py-2.5 rounded-lg hover:bg-yellow-500 transition-colors"
+  >
+    Feedback
+  </button>
+</div>
       </div>
     </div>
   );
