@@ -120,7 +120,6 @@ https://github.com/user-attachments/assets/45e5b0d8-871d-4b84-a847-ab52f1708251
 
 
 
-https://github.com/user-attachments/assets/553bdb49-6f40-499d-9e3f-a9f22b973c8f
 
 
 
@@ -141,6 +140,10 @@ GreenX is built on a modern, scalable, and decoupled architecture. The frontend 
 -   **Data Layer:** A hybrid data storage approach using SQL for structured data and AWS S3, KMS for unstructured data like images and documents.
 -   **Blockchain Network:** An Ethereum-based network for managing the EcoChain Trace certifications and GreenScore™.
 ![flow1_re](https://github.com/user-attachments/assets/0e0770ae-4bcb-42e0-9309-2020bc0e6b92)
+
+
+https://github.com/user-attachments/assets/553bdb49-6f40-499d-9e3f-a9f22b973c8f
+
 ---
 
 ### 🤖 Personalized AI Recommendations: Smarter, Greener, and Hyper-Relevant
