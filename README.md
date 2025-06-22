@@ -25,6 +25,9 @@
 *   **RePack AI for Waste Reduction:** A 3D vision system (PyTorch3D) that calculates optimal packaging sizes and provides intelligent recycling/disposal guides.
 *   **CarbonKarma AI for Impact Tracking:** A multi-modal AI that estimates a product's carbon footprint from images or text, displayed on a personal user dashboard.
 *   **GreenCoin Rewards System:** A gamified economy where users earn and redeem coins for making sustainable choices, fostering engagement and loyalty.
+
+![Bottom](https://github.com/user-attachments/assets/05790200-d146-456c-bb3b-dad63162ef72)
+
 ---
 
 ### Other Achieved Features
@@ -48,12 +51,20 @@ https://github.com/user-attachments/assets/65fa26d3-c692-4b16-a318-3c1a9aee7803
 
 ### Key AI Features
 
+
+![dropdown](https://github.com/user-attachments/assets/c75ee76f-b72c-47e3-9ce2-38ecc035acc5)
+
+
 #### 🔗 1. EcoChain Trace: Blockchain for Verifiable Trust
 EcoChain provides an immutable, transparent ledger for product certification. It ends greenwashing by giving every eco-product a verifiable history.
 *   **GreenScore™:** An A++ to D grading system based on 8 key sustainability metrics.
 *   **Digital Certificates:** Blockchain-verified certificates for products and sellers, accessible via QR code.
 *   **Consumer Transparency:** Buyers can trace a product's entire lifecycle, from raw materials to their doorstep.
 
+
+
+
+https://github.com/user-attachments/assets/ea1c28fd-9d13-4600-86bd-734aa151904c
 
 
 
@@ -106,6 +117,10 @@ GreenGather makes sustainable shopping convenient, affordable, and engaging.
 https://github.com/user-attachments/assets/45e5b0d8-871d-4b84-a847-ab52f1708251
 
 
+
+
+
+https://github.com/user-attachments/assets/553bdb49-6f40-499d-9e3f-a9f22b973c8f
 
 
 
