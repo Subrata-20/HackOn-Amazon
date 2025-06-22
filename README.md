@@ -51,11 +51,15 @@ EcoChain provides an immutable, transparent ledger for product certification. It
 *   **Digital Certificates:** Blockchain-verified certificates for products and sellers, accessible via QR code.
 *   **Consumer Transparency:** Buyers can trace a product's entire lifecycle, from raw materials to their doorstep.
 
+
+
 #### ✅ 2. EcoSense AI: AI for Seller Validation & Fraud Detection
 EcoSense automates the onboarding of genuine eco-sellers, ensuring the integrity of the GreenX marketplace.
 *   **AI-Powered Verification:** Uses **AWS Rekognition** and PhotoDNA to compare seller selfies with official documents, preventing identity fraud.
 *   **Secure Data Handling:** All sensitive seller data (PAN, GST) is encrypted using **AES-256 via AWS KMS**, ensuring enterprise-grade security.
 *   **Route Optimization:** Uses Dijkstra's algorithm to suggest the most efficient logistics routes for new sellers.
+
+
 
 #### 🌍 3. CarbonKarma AI: AI for Product Carbon Footprint Analysis
 CarbonKarma gives consumers real-time insight into the environmental impact of their purchases, turning abstract data into tangible motivation.
@@ -63,11 +67,23 @@ CarbonKarma gives consumers real-time insight into the environmental impact of t
 *   **Impact Dashboard:** A personal dashboard showing users their cumulative impact (e.g., "You've saved 12kg of CO₂ this month, equivalent to planting 3 trees").
 *   **Gamification:** Drives behavioral change by making sustainability a rewarding and emotionally resonant experience.
 
+
+
+https://github.com/user-attachments/assets/a6e8c03f-ebe5-4dd8-ac4a-b54f694f14bf
+
+
+
 #### 📦 4. RePack AI: AI for Intelligent Waste Reduction
 RePack AI tackles packaging waste at the source by using 3D vision to optimize packaging for every single item.
 *   **3D Vision Analysis:** Uses **PyTorch3D** to create a 3D model of a product from an image, calculating the optimal box size and minimizing void space.
 *   **Material Recommendation:** Suggests sustainable packaging alternatives (e.g., "Switch from bubble wrap to mushroom packaging").
 *   **Smart Disposal Guides:** Generates QR codes with clear, localized instructions for recycling or composting the packaging.
+
+
+https://github.com/user-attachments/assets/3fadd55b-1fe1-4feb-96f7-7d9d1a678c31
+
+
+  
 
 #### 🛍️ 5. GreenGather AI: Your Personalized AI Green Assistant
 GreenGather makes sustainable shopping convenient, affordable, and engaging.
