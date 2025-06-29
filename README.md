@@ -1,8 +1,8 @@
-## HackOn-Amazon
+## HackOn-Amazon (Semi-Finalist)
 
 # Amazon GreenX: The AI Hub for Sustainable Shopping
 
-**Team-0101**: Bisal Prasad | Chinmoy Dutta | Subrata Lodh
+**Team-0101**: Bisal Prasad(Leader) | Chinmoy Dutta | Subrata Lodh
 
 ![Build](https://img.shields.io/badge/Build-Passing-brightgreen)
 ![License](https://img.shields.io/badge/License-MIT-blue)
