@@ -12,7 +12,6 @@
 **GreenX** is a full-stack AI and Blockchain ecosystem integrated into Amazon to solve the critical challenges of sustainable e-commerce. It transforms the shopping experience by providing Adv. Recommendation system, Product Grading System, verifiable trust, intelligent waste reduction, and powerful incentives for both consumers and sellers.
 
 **OUR MAIN TARGET IS END-TO-END SOLUTION TO THE PROBLEM OF THE CUSTOMER AND THE SELLER**
-[Team-0101_NIT-SILCHAR.pdf](https://github.com/user-attachments/files/20851612/Team-0101_NIT-SILCHAR.pdf)
 
 ---
 ### Key Objectives
