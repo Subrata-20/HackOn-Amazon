@@ -370,7 +370,6 @@ We aim to make **Amazon the global leader in sustainable commerce**, where every
 - And rewarded with real-world impact.
 
 ---
-[🧾Team-0101_NIT-SILCHAR.pdf](https://github.com/user-attachments/files/20851612/Team-0101_NIT-SILCHAR.pdf)
 ### 💡 Why GreenX Matters
 
 GreenX isn’t just a sustainability feature — it's a **full-stack solution** that transforms how India and the world shops.  
